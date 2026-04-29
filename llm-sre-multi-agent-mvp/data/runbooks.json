@@ -1,0 +1,44 @@
+[
+  {
+    "id": "rb-001",
+    "title": "Database Connection Pool Exhaustion",
+    "keywords": [
+      "connection pool exhausted",
+      "db timeout",
+      "acquire connection timed out"
+    ],
+    "actions": [
+      {
+        "step": 5,
+        "action": "Inspect current DB active connections and long-running queries",
+        "type": "investigation"
+      },
+      {
+        "step": 6,
+        "action": "Tune application connection pool and validate DB max_connections headroom",
+        "type": "tuning"
+      }
+    ]
+  },
+  {
+    "id": "rb-002",
+    "title": "High Error Rate After Deployment",
+    "keywords": [
+      "deployment regression",
+      "rollback",
+      "release correlation"
+    ],
+    "actions": [
+      {
+        "step": 7,
+        "action": "Check deployment timeline and compare error rate before/after release",
+        "type": "release_check"
+      },
+      {
+        "step": 8,
+        "action": "Rollback to previous stable version if regression confirmed",
+        "type": "rollback"
+      }
+    ]
+  }
+]
